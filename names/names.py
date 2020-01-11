@@ -14,10 +14,13 @@ def get_mid(arr):
     return int((len(arr)-1)/2)
 
 duplicates = []
+# RUNTIME OF THIS CODE IS O(N^2) BECAUSE ITS COMPLETELY LOOPING THROUGH BOTH LISTS
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
+
+# RUNTIME OF MY CODE SHOULD BE O(N LOG(N)) WITH N BEING THE FIRST ITERATION AND THE LOG(N) BEING THE SECOND ITERATION
 DONE = False
 CHECKING = True
 i = 0

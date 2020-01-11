@@ -42,6 +42,7 @@ class LinkedList:
     # if we've gotten here, then the target node isn't in our list
     return False
 
+# TIME COMPLEXITY OF THIS CODE SHOULD BE O(N) AS IM JUST LOOPING THROUGHT THE LIST ONCE
   def reverse_list(self):
     if not self.head or not self.head.next_node:
       return 
