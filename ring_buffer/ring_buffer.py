@@ -41,15 +41,33 @@ class RingBuffer:
 
 # ----------------Stretch Goal-------------------
 
-
+# THE ADVANTAGE OF USING AN ARRAY IS I CAN USE THE INDEX VALUE TO UPDATE THE ARRAY IN CONSTANT TIME
+# IF THE TEST DIDNT REQUIRE THE INITIAL ARRAY TO BE SET WITH *CAPACITY* SPACES, THEN I COULD ALSO *GET* THE 
+# ITEMS FROM THE ARRAY IN CONSTANT TIME AS WELL, INSTEAD OF LOOPING TO FIND ONLY NON-NONE VALUES FOR 
+# IF THE ARRAY IS SMALLER THAN THE CAPACITY
 class ArrayRingBuffer:
     def __init__(self, capacity):
-        pass
+        self.capacity = capacity
+        self.current = None
+        self.storage = [self.current]*self.capacity
 
     def append(self, item):
-        pass
+        if self.current is None:
+            self.storage[0] = item
+        else:
+            i = self.storage.index(self.current)
+            if i < len(self.storage)-1:
+                self.storage[i+1] = item
+            else:
+                self.storage[0] = item
+        self.current = item
+
 
     def get(self):
-        pass
+        tmp = []
+        for i in self.storage:
+            if i is not None:
+                tmp.append(i)
+        return tmp
 
 

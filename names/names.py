@@ -21,6 +21,8 @@ duplicates = []
 #             duplicates.append(name_1)
 
 # RUNTIME OF MY CODE SHOULD BE O(N LOG(N)) WITH N BEING THE FIRST ITERATION AND THE LOG(N) BEING THE SECOND ITERATION
+# oops i just read that this was suppose to use a tree to solve this..
+# if using a tree i would do the same thing, sort one list of names within the BST and then use the other list to find duplicates
 DONE = False
 CHECKING = True
 i = 0
